@@ -8,7 +8,6 @@
 #include "third_party/Include/glm/glm.hpp"
 #include "third_party/Include/glm/gtc/matrix_transform.hpp"
 #include "third_party/Include/glm/gtc/type_ptr.hpp"
-
 //-------------------------------/
 #include "Shader.h"
 #include "Mesh.h"
