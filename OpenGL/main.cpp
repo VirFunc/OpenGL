@@ -1,3 +1,12 @@
+//------------------------------/
+//以下四种组合，可以实现console和windows模式的混合，可以达到不弹出DOS窗口的效果，
+//也可以达到在Windows程序中向控制台输出printf信息了。
+//#pragma comment( linker, "/subsystem:windows /entry:WinMainCRTStartup" )
+//#pragma comment( linker, "/subsystem:windows /entry:mainCRTStartup" )
+//#pragma comment( linker, "/subsystem:console /entry:mainCRTStartup" )
+//#pragma comment( linker, "/subsystem:console /entry:WinMainCRTStartup" )
+//#pragma comment( linker, "/subsystem:windows /entry:mainCRTStartup" ) // 设置入口地址,关闭控制台
+//------------------------------/
 #define SDL_MAIN_HANDLED
 //------------------------------/
 #define WIN_HEIGHT 600
@@ -95,7 +104,8 @@ bool Init()
 
 	window =
 		SDL_CreateWindow("SDL2-OpenGL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-			WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+			WIN_WIDTH, WIN_HEIGHT, 
+			SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 	if (!window)
 	{
 		cerr << "Failed to create window" << endl;
