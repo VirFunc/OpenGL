@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="资源文件\shader">
+      <UniqueIdentifier>{10d758b4-b89d-4f71-8df4-6b6e50910eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\texture">
+      <UniqueIdentifier>{5c000475-2d91-43d4-98f3-00cdb3eb6f87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,5 +62,36 @@
     <ClInclude Include="stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\f_world.fs">
+      <Filter>资源文件\shader</Filter>
+    </None>
+    <None Include="shader\light.fs">
+      <Filter>资源文件\shader</Filter>
+    </None>
+    <None Include="shader\light.vs">
+      <Filter>资源文件\shader</Filter>
+    </None>
+    <None Include="shader\object.fs">
+      <Filter>资源文件\shader</Filter>
+    </None>
+    <None Include="shader\object.vs">
+      <Filter>资源文件\shader</Filter>
+    </None>
+    <None Include="shader\v_world.vs">
+      <Filter>资源文件\shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tex\2b.jpg">
+      <Filter>资源文件\texture</Filter>
+    </Image>
+    <Image Include="tex\bg.jpg">
+      <Filter>资源文件\texture</Filter>
+    </Image>
+    <Image Include="tex\hello.jpg">
+      <Filter>资源文件\texture</Filter>
+    </Image>
   </ItemGroup>
 </Project>

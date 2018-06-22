@@ -35,6 +35,19 @@
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\f_world.fs" />
+    <None Include="shader\light.fs" />
+    <None Include="shader\light.vs" />
+    <None Include="shader\object.fs" />
+    <None Include="shader\object.vs" />
+    <None Include="shader\v_world.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tex\2b.jpg" />
+    <Image Include="tex\bg.jpg" />
+    <Image Include="tex\hello.jpg" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{ba4011fe-7736-4fb3-b525-d9e94c730781}</ProjectGuid>

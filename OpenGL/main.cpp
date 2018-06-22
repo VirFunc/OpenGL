@@ -29,7 +29,6 @@ bool Init();
 void SetupRs();
 void Render();
 void Destroy();
-void popup(char *p);
 // ------------------------------/
 //Input process
 void win_event_pro(SDL_Event& e,float _duration);
@@ -130,7 +129,7 @@ void SetupRs()
 	shader.set_mat4f("projection", glm::value_ptr(proj));
 	// ·­×ª
 	stbi_set_flip_vertically_on_load(true);
-	texture.load_from_file("tex/hello.jpg", 0, 0);
+	texture.load_from_file("texture/hello.jpg", 0, 0);
 	texture.use();
 	shader.set_int("sampler", 0);
 	make_tex_cube(&mesh);
@@ -157,13 +156,6 @@ void Destroy()
 	if (window)
 		SDL_DestroyWindow(window);
 	SDL_Quit();
-}
-
-// ------------------------------/
-// -------popup----------/
-void popup(char *p)
-{
-	SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, "SDL2", p, window);
 }
 
 void win_event_pro(SDL_Event & e, float _duration)
