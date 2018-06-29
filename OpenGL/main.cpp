@@ -5,7 +5,7 @@
 //#pragma comment( linker, "/subsystem:windows /entry:mainCRTStartup" )
 //#pragma comment( linker, "/subsystem:console /entry:mainCRTStartup" )
 //#pragma comment( linker, "/subsystem:console /entry:WinMainCRTStartup" )
-//#pragma comment( linker, "/subsystem:windows /entry:mainCRTStartup" ) // 设置入口地址,关闭控制台
+#pragma comment( linker, "/subsystem:windows /entry:mainCRTStartup" ) // 设置入口地址,关闭控制台
 //------------------------------/
 #define SDL_MAIN_HANDLED
 //------------------------------/
@@ -34,7 +34,7 @@ Mesh mesh;
 Texture texture;
 Camera camera;
 // ------------------------------/
-bool Init();
+bool init();
 void SetupRs();
 void Render();
 void Destroy();
@@ -47,8 +47,15 @@ void mouse_event_pro(SDL_Event& e, float _duration);
 //-------------------------------/
 int main()
 {
-	Init();
+	if(!init())
+	{
+		cerr << "Failed to initialize." << endl;
+		system("pause");
+		return -1;
+	}
+
 	SetupRs();
+
 	SDL_Event e;
 	bool quit = 0;
 	clock_t last = clock();
@@ -90,7 +97,7 @@ int main()
 
 
 // ------------Init------------/
-bool Init()
+bool init()
 {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) 
 	{
@@ -99,12 +106,12 @@ bool Init()
 	}
 
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
 	window =
 		SDL_CreateWindow("SDL2-OpenGL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-			WIN_WIDTH, WIN_HEIGHT, 
+			WIN_WIDTH, WIN_HEIGHT,
 			SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 	if (!window)
 	{
