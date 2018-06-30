@@ -64,33 +64,30 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader\f_world.fs">
+    <None Include="shader\f_world.frag">
       <Filter>资源文件\shader</Filter>
     </None>
-    <None Include="shader\light.fs">
+    <None Include="shader\light.frag">
       <Filter>资源文件\shader</Filter>
     </None>
-    <None Include="shader\light.vs">
+    <None Include="shader\light.vert">
       <Filter>资源文件\shader</Filter>
     </None>
-    <None Include="shader\object.fs">
+    <None Include="shader\object.frag">
       <Filter>资源文件\shader</Filter>
     </None>
-    <None Include="shader\object.vs">
+    <None Include="shader\object.vert">
       <Filter>资源文件\shader</Filter>
     </None>
-    <None Include="shader\v_world.vs">
+    <None Include="shader\v_world.vert">
       <Filter>资源文件\shader</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="tex\2b.jpg">
+    <Image Include="texture\bg.jpg">
       <Filter>资源文件\texture</Filter>
     </Image>
-    <Image Include="tex\bg.jpg">
-      <Filter>资源文件\texture</Filter>
-    </Image>
-    <Image Include="tex\hello.jpg">
+    <Image Include="texture\hello.jpg">
       <Filter>资源文件\texture</Filter>
     </Image>
   </ItemGroup>

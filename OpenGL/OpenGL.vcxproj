@@ -36,17 +36,16 @@
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader\f_world.fs" />
-    <None Include="shader\light.fs" />
-    <None Include="shader\light.vs" />
-    <None Include="shader\object.fs" />
-    <None Include="shader\object.vs" />
-    <None Include="shader\v_world.vs" />
+    <None Include="shader\f_world.frag" />
+    <None Include="shader\light.frag" />
+    <None Include="shader\light.vert" />
+    <None Include="shader\object.frag" />
+    <None Include="shader\object.vert" />
+    <None Include="shader\v_world.vert" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="tex\2b.jpg" />
-    <Image Include="tex\bg.jpg" />
-    <Image Include="tex\hello.jpg" />
+    <Image Include="texture\bg.jpg" />
+    <Image Include="texture\hello.jpg" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
